@@ -78,7 +78,6 @@ section{
 .heading span{
     color:var(--yellow);
 }
-
 header{
     position: fixed;
     top:0; left:0;
@@ -174,7 +173,7 @@ header .navbar ul li a:hover{
     color:#eee;
     padding: 1rem 0;
 }
-
+}
 .about .row{
     display: flex;
     align-items: center;
