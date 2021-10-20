@@ -4,19 +4,19 @@ $(document).ready(function() {
     $(this).toggleClass('fa-times');
     $('header').toggleClass('toggle');
   });
-
-  $(window).on('scroll load', function() {
+  
+  $(window).on('scroll load',function(){
 
     $('#menu').removeClass('fa-times');
     $('header').removeClass('toggle');
 
-    if ($(window).scrollTop() > 0) {
+    if($(window).scrollTop() > 0){
       $('.top').show();
-    } else {
+    }else{
       $('.top').hide();
     }
-
   });
+
 
   // smooth scrolling 
 
@@ -31,8 +31,23 @@ $(document).ready(function() {
       },
       500,
       'linear'
+      
     );
 
+  $('a[href*="#"]').on('click', function(e) {
+
+    e.preventDefault();
+
+    $('html, body').animate({
+
+        scrollTop: $($(this).attr('href')).offset().top,
+
+      },
+      500,
+      'linear'
+  );
+  
   });
+});
 
 });
